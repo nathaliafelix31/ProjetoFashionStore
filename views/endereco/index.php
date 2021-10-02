@@ -26,15 +26,29 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            //'id',
             'logradouro',
-            'numero',
-            'complemento',
-            'bairro',
-            //'cidade',
+            //'numero',
+            //'complemento',
+            //'bairro',
+            'cidade',
             //'estado',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yiigrid\ActionColumn',
+                'template'=> '{update}{delete}',
+                'buttons'=>[ 
+                    'delete' => function($url, $model){
+                        return Html::a('<span class"glyphicon glyphicon-trash"></span>',['delete', 'id'=>$model->id],[
+                            'class'=>'',
+                            'data' =>[
+                                'confirm' => 'Deseja realmente excluir este item?',
+                            'method'=>'post',
+                            ],
+                        ]);
+                    }
+                ]
+            ]
         ],
     ]); ?>
 

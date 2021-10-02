@@ -12,16 +12,18 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'quantidade')->textInput() ?>
+    <?= $form->field($model, 'quantidade')->textInput(['type'=>'number']) ?>
 
     <?= $form->field($model, 'precoVenda')->textInput() ?>
 
     <?= $form->field($model, 'prod_id')->textInput() ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Salvar', ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
+
+   
 
 </div>

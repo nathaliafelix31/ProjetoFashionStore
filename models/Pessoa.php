@@ -40,10 +40,11 @@ class Pessoa extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['nome', 'sexo', 'cpf', 'rg', 'datanascimento', 'email', 'telefone', 'endereco_id', 'obs', 'login', 'senha', 'nivelacesso'], 'required'],
+            [['nome', 'sexo', 'cpf', 'rg', 'datanascimento', 'email', 'telefone', 'endereco_id', 'obs', 'login', 'senha', 'nivelacesso'], 'required', 'message' =>'Campo Inválido'],
             [['cpf', 'endereco_id'], 'integer'],
             [['datanascimento'], 'safe'],
-            [['nome', 'sexo', 'rg', 'email', 'telefone', 'obs', 'login', 'senha', 'nivelacesso'], 'string', 'max' => 255],
+            [['email'], 'email'],
+            [['nome', 'sexo', 'rg', 'telefone', 'obs', 'login', 'senha', 'nivelacesso'], 'string', 'max' => 255],
             [['endereco_id'], 'exist', 'skipOnError' => true, 'targetClass' => Endereco::className(), 'targetAttribute' => ['endereco_id' => 'id']],
         ];
     }
@@ -59,14 +60,14 @@ class Pessoa extends \yii\db\ActiveRecord
             'sexo' => 'Sexo',
             'cpf' => 'Cpf',
             'rg' => 'Rg',
-            'datanascimento' => 'Datanascimento',
+            'datanascimento' => 'Data  de Nascimento',
             'email' => 'Email',
             'telefone' => 'Telefone',
             'endereco_id' => 'Endereco ID',
-            'obs' => 'Obs',
+            'obs' => 'Observações',
             'login' => 'Login',
             'senha' => 'Senha',
-            'nivelacesso' => 'Nivelacesso',
+            'nivelacesso' => 'Nivel de Acesso',
         ];
     }
 

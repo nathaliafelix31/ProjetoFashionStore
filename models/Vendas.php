@@ -34,7 +34,7 @@ class Vendas extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['datavenda'], 'required'],
+            [['datavenda'], 'required', 'message' =>'Campo Inválido'],
             [['datavenda'], 'safe'],
             [['desconto', 'precototal'], 'number'],
             [['qtd', 'produto_id', 'pessoa_id'], 'integer'],
@@ -50,10 +50,10 @@ class Vendas extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'datavenda' => 'Datavenda',
+            'datavenda' => 'Data da Venda',
             'desconto' => 'Desconto',
-            'precototal' => 'Precototal',
-            'qtd' => 'Qtd',
+            'precototal' => 'Preço Total',
+            'qtd' => 'Quantidade',
             'produto_id' => 'Produto ID',
             'pessoa_id' => 'Pessoa ID',
         ];

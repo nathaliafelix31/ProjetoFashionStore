@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Pessoa', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Cadastrar', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -26,11 +26,24 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'nome',
-            'sexo',
-            'cpf',
-            'rg',
+            //'id',
+            [
+                'attribute'=>'nome',
+                'filterInputOptions' => [
+                    'class'       => 'form-control',
+                    'placeholder' => 'Digite o nome do cliente...'
+                ], 
+            ],
+
+            //'sexo',
+            [
+                'attribute'=>'cpf',
+                'filterInputOptions' => [
+                    'class'       => 'form-control',
+                    'placeholder' => 'Digite o CPF do cliente...'
+                ], 
+            ],
+            //'rg',
             //'datanascimento',
             //'email:email',
             //'telefone',
@@ -40,7 +53,21 @@ $this->params['breadcrumbs'][] = $this->title;
             //'senha',
             //'nivelacesso',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yiigrid\ActionColumn',
+                'template'=> '{update}{delete}',
+                'buttons'=>[ 
+                    'delete' => function($url, $model){
+                        return Html::a('<span class"glyphicon glyphicon-trash"></span>',['delete', 'id'=>$model->id],[
+                            'class'=>'',
+                            'data' =>[
+                                'confirm' => 'Deseja realmente excluir este item?',
+                            'method'=>'post',
+                            ],
+                        ]);
+                    }
+                ]
+            ]
         ],
     ]); ?>
 

@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Contem */
 
-$this->title = 'Create Contem';
+$this->title = 'Contem';
 $this->params['breadcrumbs'][] = ['label' => 'Contems', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

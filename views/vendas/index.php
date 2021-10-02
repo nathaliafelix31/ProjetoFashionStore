@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Vendas', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Vendas', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -34,7 +34,21 @@ $this->params['breadcrumbs'][] = $this->title;
             //'produto_id',
             //'pessoa_id',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yiigrid\ActionColumn',
+                'template'=> '{update}{delete}',
+                'buttons'=>[ 
+                    'delete' => function($url, $model){
+                        return Html::a('<span class"glyphicon glyphicon-trash"></span>',['delete', 'id'=>$model->id],[
+                            'class'=>'',
+                            'data' =>[
+                                'confirm' => 'Deseja realmente excluir este item?',
+                            'method'=>'post',
+                            ],
+                        ]);
+                    }
+                ]
+            ]
         ],
     ]); ?>
 

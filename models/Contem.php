@@ -30,7 +30,7 @@ class Contem extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['quantidade', 'precoVenda', 'prod_id'], 'required'],
+            [['quantidade', 'precoVenda', 'prod_id'], 'required', 'message' =>'Campo Inválido'],
             [['quantidade', 'prod_id'], 'integer'],
             [['precoVenda'], 'number'],
             [['prod_id'], 'exist', 'skipOnError' => true, 'targetClass' => Produto::className(), 'targetAttribute' => ['prod_id' => 'id']],
@@ -45,7 +45,7 @@ class Contem extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'quantidade' => 'Quantidade',
-            'precoVenda' => 'Preco Venda',
+            'precoVenda' => 'Preço de Venda',
             'prod_id' => 'Prod ID',
         ];
     }

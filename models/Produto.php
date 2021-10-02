@@ -34,10 +34,10 @@ class Produto extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['nome', 'descricao', 'unidade', 'precoVenda', 'precoCusto', 'estoque'], 'required'],
-            [['unidade', 'estoque'], 'integer'],
+            [['nome', 'descricao', 'unidade', 'precoVenda', 'precoCusto', 'estoque'], 'required', 'message' =>'Campo Inválido'],
+            [[ 'estoque'], 'integer'],
             [['precoVenda', 'precoCusto'], 'number'],
-            [['nome', 'descricao'], 'string', 'max' => 255],
+            [['nome', 'descricao', 'unidade',], 'string', 'max' => 255],
         ];
     }
 
@@ -49,10 +49,10 @@ class Produto extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'nome' => 'Nome',
-            'descricao' => 'Descricao',
+            'descricao' => 'Descrição',
             'unidade' => 'Unidade',
-            'precoVenda' => 'Preco Venda',
-            'precoCusto' => 'Preco Custo',
+            'precoVenda' => 'Preço de Venda',
+            'precoCusto' => 'Preço de Custo',
             'estoque' => 'Estoque',
         ];
     }

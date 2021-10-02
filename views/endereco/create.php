@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Endereco */
 
-$this->title = 'Create Endereco';
+$this->title = 'Endereço';
 $this->params['breadcrumbs'][] = ['label' => 'Enderecos', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

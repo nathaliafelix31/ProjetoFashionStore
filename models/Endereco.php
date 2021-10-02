@@ -33,7 +33,7 @@ class Endereco extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['logradouro', 'numero', 'bairro', 'cidade', 'estado'], 'required'],
+            [['logradouro', 'numero', 'bairro', 'cidade', 'estado'], 'required', 'message' =>'Campo Inválido'],
             [['logradouro', 'numero', 'complemento', 'bairro', 'cidade', 'estado'], 'string', 'max' => 255],
         ];
     }
