@@ -41,10 +41,10 @@ class Pessoa extends \yii\db\ActiveRecord
     {
         return [
             [['nome', 'sexo', 'cpf', 'rg', 'datanascimento', 'email', 'telefone', 'endereco_id', 'obs', 'login', 'senha', 'nivelacesso'], 'required', 'message' =>'Campo Inválido'],
-            [['cpf', 'endereco_id'], 'integer'],
+            [['endereco_id'], 'integer'],
             [['datanascimento'], 'safe'],
             [['email'], 'email'],
-            [['nome', 'sexo', 'rg', 'telefone', 'obs', 'login', 'senha', 'nivelacesso'], 'string', 'max' => 255],
+            [['nome', 'sexo','cpf', 'rg', 'telefone', 'obs', 'login', 'senha', 'nivelacesso'], 'string', 'max' => 255],
             [['endereco_id'], 'exist', 'skipOnError' => true, 'targetClass' => Endereco::className(), 'targetAttribute' => ['endereco_id' => 'id']],
         ];
     }

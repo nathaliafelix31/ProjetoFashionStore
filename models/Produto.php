@@ -50,7 +50,7 @@ class Produto extends \yii\db\ActiveRecord
             'id' => 'ID',
             'nome' => 'Nome',
             'descricao' => 'Descrição',
-            'unidade' => 'Unidade',
+            'unidade' => 'Tamanho',
             'precoVenda' => 'Preço de Venda',
             'precoCusto' => 'Preço de Custo',
             'estoque' => 'Estoque',
