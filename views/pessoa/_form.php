@@ -16,7 +16,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'sexo')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'cpf')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'cpf')->textInput([]) ?>
 
     <?= $form->field($model, 'rg')->textInput(['maxlength' => true]) ?>
 
