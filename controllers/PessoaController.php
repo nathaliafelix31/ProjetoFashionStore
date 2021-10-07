@@ -7,6 +7,8 @@ use app\models\PessoaSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
+use yii\web\ForbiddenHttpException;
 
 /**
  * PessoaController implements the CRUD actions for Pessoa model.
@@ -26,6 +28,32 @@ class PessoaController extends Controller
                     'actions' => [
                         'delete' => ['POST'],
                     ],
+                ],
+                'access' => [
+                    'class' => AccessControl::className(),
+                    'only' => ['create','delete','view','update'],
+                    'rules' => [
+                        [
+                            'allow' => true,
+                            'actions' => ['view'],
+                            'roles' => ['?'],
+                        ],
+                        [
+                            'allow' => true,
+                            'actions' => ['create','delete','view','update'],
+                            'roles' => ['@'],
+                        ],
+                    ],
+      
+                    'denyCallback' => function($rule, $action) {
+                        if (\Yii::$app->user->isGuest) {
+                            \Yii::$app->user->loginRequired();
+                        }
+                        else {
+                            throw new ForbiddenHttpException('Você não tem acesso a essas funcionalidades');
+                        }                   
+                    }
+      
                 ],
             ]
         );

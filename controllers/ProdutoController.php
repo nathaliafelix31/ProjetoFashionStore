@@ -48,8 +48,8 @@ class ProdutoController extends Controller
                     ],
       
                     'denyCallback' => function($rule, $action) {
-                        if (Yii::$app->user->isGuest) {
-                            Yii::$app->user->loginRequired();
+                        if (\Yii::$app->user->isGuest) {
+                            \Yii::$app->user->loginRequired();
                         }
                         else {
                             throw new ForbiddenHttpException('Você não tem acesso a essas funcionalidades');
