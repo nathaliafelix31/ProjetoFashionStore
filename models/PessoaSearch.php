@@ -17,8 +17,8 @@ class PessoaSearch extends Pessoa
     public function rules()
     {
         return [
-            [['id', 'cpf', 'endereco_id'], 'integer'],
-            [['nome', 'sexo', 'rg', 'datanascimento', 'email', 'telefone', 'obs', 'login', 'senha', 'nivelacesso'], 'safe'],
+            [['id', 'endereco_id'], 'integer'],
+            [['nome', 'sexo', 'rg', 'cpf', 'datanascimento', 'email', 'telefone', 'obs', 'login', 'senha', 'nivelacesso'], 'safe'],
         ];
     }
 
@@ -59,13 +59,13 @@ class PessoaSearch extends Pessoa
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'cpf' => $this->cpf,
             'datanascimento' => $this->datanascimento,
             'endereco_id' => $this->endereco_id,
         ]);
 
         $query->andFilterWhere(['like', 'nome', $this->nome])
             ->andFilterWhere(['like', 'sexo', $this->sexo])
+            ->andFilterWhere(['like', 'cpf', $this->cpf])
             ->andFilterWhere(['like', 'rg', $this->rg])
             ->andFilterWhere(['like', 'email', $this->email])
             ->andFilterWhere(['like', 'telefone', $this->telefone])
