@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model app\models\Endereco */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Enderecos', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Endereços', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>

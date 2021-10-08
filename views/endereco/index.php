@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\EnderecoSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Enderecos';
+$this->title = 'Endereços';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="endereco-index">
@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php 
         if (!Yii::$app->user->isGuest) {
 
-            echo Html::a('Create Endereco', ['create'], ['class' => 'btn btn-success']);
+            echo Html::a('Cadastrar', ['create'], ['class' => 'btn btn-success']);
         }
     ?>>
     </p>
