@@ -10,6 +10,7 @@ use yii\bootstrap4\Breadcrumbs;
 use yii\bootstrap4\Html;
 use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
+use kartik\widgets\SideNav;
 
 AppAsset::register($this);
 ?>
@@ -28,34 +29,65 @@ AppAsset::register($this);
 
 <header>
     <?php
-    NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar navbar-expand-md navbar-dark bg-dark fixed-top',
-        ],
-    ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav'],
+
+    echo SideNav::widget([
+        'type' => SideNav::TYPE_DEFAULT,
+        'heading' => 'Fashion Store',
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'Cadastro', 'url' => ['/pessoa/index']],
-            ['label' => 'Produtos', 'url' => ['/produto/index']],
-            Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
-            ) : (
-                '<li>'
-                . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])
-                . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->nome . ')',
-                    ['class' => 'btn btn-link logout']
-                )
-                . Html::endForm()
-                . '</li>'
-            )
+            [
+                'url' => ['/site/index'],
+                'label' => 'Home',
+                'icon' => 'home'
+            ],
+            [
+                'url' => ['/pessoa/index'],
+                'label' => 'Cadastro',
+                'icon' => 'glyphicon glyphicon-user'
+            ],
+            [
+                'url' => ['/vendas/index'],
+                'label' => 'Carrinho',
+                'icon' => 'glyphicon glyphicon-shopping-cart'
+            ],
+            [
+                
+                'label' => 'Produto',
+                'icon' => 'glyphicon glyphicon-heart',
+                'items' => [
+                    ['label' => 'Novo', 'icon'=>'
+                    glyphicon glyphicon-plus-sign', 'url'=>'/produto/index'],
+                    ['label' => 'Biquinis', 'icon'=>'glyphicon glyphicon-star', 'url'=>'#'],
+                    ['label' => 'Blusas', 'icon'=>'glyphicon glyphicon-star', 'url'=>'#'],
+                    ['label' => 'Calças', 'icon'=>'glyphicon glyphicon-star', 'url'=>'#'],
+                    ['label' => 'Shorts', 'icon'=>'glyphicon glyphicon-star', 'url'=>'#'],
+                    ['label' => 'Vestidos', 'icon'=>'glyphicon glyphicon-star', 'url'=>'#'],
+                   
+                ],
+                Yii::$app->user->isGuest ? (
+                    ['label' => 'Login', 'url' => ['/site/login']]
+                ) : (
+                    '<li>'
+                    . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])
+                    . Html::submitButton(
+                        'Logout (' . Yii::$app->user->identity->nome . ')',
+                        ['class' => 'btn btn-link logout']
+                    )
+                    . Html::endForm()
+                    . '</li>'
+                ),
+            ],
+           
+            [
+                'label' => 'Help',
+                'icon' => 'question-sign',
+                'items' => [
+                    ['label' => 'About', 'icon'=>'info-sign', 'url'=>'#'],
+                    ['label' => 'Contact', 'icon'=>'phone', 'url'=>'#'],
+                ],
+            ],
         ],
     ]);
-    NavBar::end();
+
     ?>
 </header>
 
@@ -71,8 +103,9 @@ AppAsset::register($this);
 
 <footer class="footer mt-auto py-3 text-muted">
     <div class="container">
-        <p class="float-left">&copy; My Company <?= date('Y') ?></p>
-        <p class="float-right"><?= Yii::powered() ?></p>
+        <p class="text-center">&copy; Roneide Oliveira💜<?= date('Y') ?></p>
+        <p class="float-right"></p>
+        
     </div>
 </footer>
 
