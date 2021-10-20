@@ -15,6 +15,7 @@ use kartik\widgets\SideNav;
 
 AppAsset::register($this);
 ?>
+
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>" class="h-100">
@@ -33,7 +34,6 @@ AppAsset::register($this);
 
    echo SideNav::widget([
         'type' => SideNav::TYPE_DEFAULT,
-        'heading' => 'Fashion Store',
         'items' => [
             [
                 'url' => ['/site/index'],
@@ -57,12 +57,12 @@ AppAsset::register($this);
                 'icon' => 'glyphicon glyphicon-heart',
                 'items' => [
                     ['label' => 'Novo', 'icon'=>'
-                    glyphicon glyphicon-plus-sign', 'url'=>'/produto/index'],
-                    ['label' => 'Biquinis', 'icon'=>'glyphicon glyphicon-star', 'url'=>'#'],
-                    ['label' => 'Blusas', 'icon'=>'glyphicon glyphicon-star', 'url'=>'#'],
-                    ['label' => 'Calças', 'icon'=>'glyphicon glyphicon-star', 'url'=>'#'],
-                    ['label' => 'Shorts', 'icon'=>'glyphicon glyphicon-star', 'url'=>'#'],
-                    ['label' => 'Vestidos', 'icon'=>'glyphicon glyphicon-star', 'url'=>'#'],
+                    glyphicon glyphicon-plus-sign', 'url'=>['/produto/index']],
+                    ['label' => 'Biquinis', 'icon'=>'glyphicon glyphicon-star', 'url'=>['/produto/biquini']],
+                    ['label' => 'Blusas', 'icon'=>'glyphicon glyphicon-star', 'url'=>['/produto/blusa']],
+                    ['label' => 'Calças', 'icon'=>'glyphicon glyphicon-star', 'url'=>['/produto/calça']],
+                    ['label' => 'Shorts', 'icon'=>'glyphicon glyphicon-star', 'url'=>['/produto/short']],
+                    ['label' => 'Vestidos', 'icon'=>'glyphicon glyphicon-star', 'url'=>['/produto/vestido']],
                    
                 ],
                 Yii::$app->user->isGuest ? (
