@@ -82,3 +82,13 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+
+.carousel-item active{
+    margin-bottom: 30px;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.carousel img {
+    width: auto;
+}

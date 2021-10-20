@@ -1,9 +1,16 @@
 <?php
+use yii\helpers\Html;
 
+use yii\widgets\ActiveForm;
+
+use yii\helpers\Url;
 /* @var $this yii\web\View */
 
 $this->title = '🌺Fashion Strore';
+
 ?>
+
+<link rel="stylesheet" href="web/css/site.css">
 <div class="site-index">
 
     <div class="jumbotron text-center bg-transparent">
@@ -13,6 +20,7 @@ $this->title = '🌺Fashion Strore';
     </div>
           
 </div>
+
     <section class="container">
 
         <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
@@ -25,16 +33,18 @@ $this->title = '🌺Fashion Strore';
             </ol>
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
-                <img src="images/asa delta.jpg" alt="Biquini asa delta vinho">
+                    <div >
+                       <?php echo Html::img('@web/assets/images/1.jpg',['alt'=>'asa delta verde militar', 'class'=>'meu-item', 'height'=>'500', 'width'=>'500']); ?> 
+                                          
+                    </div>
+                    <div>
+                        <?php echo Html::img('@web/assets/images/2.jpg',['alt'=>'asa delta verde militar', 'class'=>'meu-item','height'=>'500', 'width'=>'500']); ?> 
+                    </div>
+                    <div>
+                        <?php echo Html::img('@web/assets/images/3.jpg',['alt'=>'asa delta verde militar', 'class'=>'meu-item','height'=>'500', 'width'=>'500']); ?>
+                    </div>
+                
                 </div>
-                <div class="carousel-item">
-                <img src="./images/Biquini Asa Delta Noronha.jpg" alt="Biquini Asa Delta Noronha">
-                </div>
-                <div class="carousel-item">
-                <img src="./images/asa delta verde.jpg" alt="Biquini Asa Delta Verde Militar">
-                </div>
-            
-            </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>

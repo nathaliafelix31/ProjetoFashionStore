@@ -12,6 +12,7 @@ use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
 use kartik\widgets\SideNav;
 
+
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -30,14 +31,15 @@ AppAsset::register($this);
 <header>
     <?php
 
-    echo SideNav::widget([
+   echo SideNav::widget([
         'type' => SideNav::TYPE_DEFAULT,
         'heading' => 'Fashion Store',
         'items' => [
             [
                 'url' => ['/site/index'],
                 'label' => 'Home',
-                'icon' => 'home'
+                'icon' => 'home',
+                
             ],
             [
                 'url' => ['/pessoa/index'],
@@ -87,6 +89,8 @@ AppAsset::register($this);
             ],
         ],
     ]);
+    
+
 
     ?>
 </header>
