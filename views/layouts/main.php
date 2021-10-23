@@ -44,8 +44,10 @@ AppAsset::register($this);
             [
                 'url' => ['/pessoa/index'],
                 'label' => 'Cadastro',
-                'icon' => 'glyphicon glyphicon-user'
+                'icon' => 'glyphicon glyphicon-user',
+                
             ],
+            
             [
                 'url' => ['/vendas/index'],
                 'label' => 'Carrinho',

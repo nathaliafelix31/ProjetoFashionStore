@@ -117,7 +117,7 @@ class Produto extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
         return self::findOne(['login'=>$username]);
     }
  
-    public function validatePassword($password)
+   public function validatePassword($password)
     {
         return Yii::$app->getSecurity()->validatePassword($password, $this->senha);
     }

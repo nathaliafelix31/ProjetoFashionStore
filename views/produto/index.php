@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
     <?php 
         if (!Yii::$app->user->isGuest) {
-         Html::a('Novo Produto', ['create'], ['class' => 'btn btn-success']);
+         echo Html::a('Novo Produto', ['create'], ['class' => 'btn btn-success']);
         }
     ?>
        
