@@ -7,9 +7,11 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\ProdutoSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
+
 $this->title = 'Produtos';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<link rel="stylesheet" href="web/css/style.css">
 <div class="produto-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
@@ -31,14 +33,9 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             //['class' => 'yii\grid\SerialColumn'],
 
-            //'id',
+            
             'nome',
-            //'descricao',
-            //'unidade',
-            //'precoVenda',
-            //'precoCusto',
-            //'estoque',
-
+            
             [ 
                 'class' => 'yii\grid\ActionColumn',
                 'template'=> '{view}{update}{delete}',
@@ -59,6 +56,267 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ],
     ]); ?>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+            <?php echo Html::img('@web/assets/images/1.jpg',['alt'=>'Biquini', 'class'=>'card-img-top']); ?>
+          <div class="card-body">
+            <h5 class="card-title">Biquini Asa Delta Verde Militar</h5>
+            <a href="#" class="btn btn-info">Comprar</a>
+          </div>
+        </div>
+    </div>
+<br>
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+          <?php echo Html::img('@web/assets/images/3.jpg',['alt'=>'biquini', 'class'=>'card-img-top']); ?>
+        <div class="card-body">
+          <h5 class="card-title">Biquíni Noronha</h5>
+          <a href="#" class="btn btn-info">Comprar</a>
+        </div>
+      </div>
+    </div>
+<br>
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+          <?php echo Html::img('@web/assets/images/2.jpg',['alt'=>'biquini', 'class'=>'card-img-top']); ?>
+        <div class="card-body">
+          <h5 class="card-title">Biquíni Larissa</h5>
+          <a href="#" class="btn btn-info">Comprar</a>
+        </div>
+      </div>
+    </div>
+<br>
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+          <?php echo Html::img('@web/assets/images/4.jpg',['alt'=>'biquini', 'class'=>'card-img-top']); ?>
+        <div class="card-body">
+          <h5 class="card-title">Biquíni Beijocas</h5>
+          <a href="#" class="btn btn-info">Comprar</a>
+        </div>
+      </div>
+
+  </div>
+<br>
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+        <?php echo Html::img('@web/assets/images/5.jpeg',['alt'=>'biquini', 'class'=>'card-img-top']); ?>
+      <div class="card-body">
+        <h5 class="card-title">Biquíni Geovanna</h5>
+        <a href="#" class="btn btn-info">Comprar</a>
+      </div>
+    </div>
+  </div>
+<br>
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+        <?php echo Html::img('@web/assets/images/6.jpg',['alt'=>'Short', 'class'=>'card-img-top']); ?>
+      <div class="card-body">
+        <h5 class="card-title">Short AnaBella</h5>
+        <a href="#" class="btn btn-info">Comprar</a>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+        <?php echo Html::img('@web/assets/images/7.jpg',['alt'=>'Short', 'class'=>'card-img-top']); ?>
+      <div class="card-body">
+        <h5 class="card-title">Short Jeans</h5>
+        <a href="#" class="btn btn-info">Comprar</a>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+        <?php echo Html::img('@web/assets/images/8.jpg',['alt'=>'Short', 'class'=>'card-img-top']); ?>
+      <div class="card-body">
+        <h5 class="card-title">Short Jeans</h5>
+        <a href="#" class="btn btn-info">Comprar</a>
+      </div>
+    </div>
+  </div>
+<br>
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+        <?php echo Html::img('@web/assets/images/9.jpg',['alt'=>'Short', 'class'=>'card-img-top']); ?>
+      <div class="card-body">
+        <h5 class="card-title">Short Jeans</h5>
+        <a href="#" class="btn btn-info">Comprar</a>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+        <?php echo Html::img('@web/assets/images/10.jpg',['alt'=>'Calça', 'class'=>'card-img-top']); ?>
+      <div class="card-body">
+        <h5 class="card-title">Calça Samara</h5>
+        <a href="#" class="btn btn-info">Comprar</a>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+        <?php echo Html::img('@web/assets/images/11.jpg',['alt'=>'Calça', 'class'=>'card-img-top']); ?>
+      <div class="card-body">
+        <h5 class="card-title">Calça Jogger</h5>
+        <a href="#" class="btn btn-info">Comprar</a>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+        <?php echo Html::img('@web/assets/images/12.jpg',['alt'=>'Calça', 'class'=>'card-img-top']); ?>
+      <div class="card-body">
+        <h5 class="card-title">Calça Jeans</h5>
+        <a href="#" class="btn btn-info">Comprar</a>
+      </div>
+    </div>
+  </div>
+<br>
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+        <?php echo Html::img('@web/assets/images/13.jpg',['alt'=>'Calça', 'class'=>'card-img-top']); ?>
+      <div class="card-body">
+        <h5 class="card-title">Calça Jeans</h5>
+        <a href="#" class="btn btn-info">Comprar</a>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+        <?php echo Html::img('@web/assets/images/14.PNG',['alt'=>'Vestido', 'class'=>'card-img-top']); ?>
+      <div class="card-body">
+        <h5 class="card-title">Vestido</h5>
+        <a href="#" class="btn btn-info">Comprar</a>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+        <?php echo Html::img('@web/assets/images/15.jpg',['alt'=>'Vestido', 'class'=>'card-img-top']); ?>
+      <div class="card-body">
+        <h5 class="card-title">Vestido</h5>
+        <a href="#" class="btn btn-info">Comprar</a>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+        <?php echo Html::img('@web/assets/images/16.jpg',['alt'=>'Vestido', 'class'=>'card-img-top']); ?>
+      <div class="card-body">
+        <h5 class="card-title">Vestido</h5>
+        <a href="#" class="btn btn-info">Comprar</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+        <?php echo Html::img('@web/assets/images/17.jpg',['alt'=>'Vestido', 'class'=>'card-img-top']); ?>
+      <div class="card-body">
+        <h5 class="card-title">Vestido</h5>
+        <a href="#" class="btn btn-info">Comprar</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+        <?php echo Html::img('@web/assets/images/18.PNG',['alt'=>'Vestido', 'class'=>'card-img-top']); ?>
+      <div class="card-body">
+        <h5 class="card-title">Vestido</h5>
+        <a href="#" class="btn btn-info">Comprar</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+        <?php echo Html::img('@web/assets/images/19.jpg',['alt'=>'Vestido', 'class'=>'card-img-top']); ?>
+      <div class="card-body">
+        <h5 class="card-title">Vestido</h5>
+        <a href="#" class="btn btn-info">Comprar</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+        <?php echo Html::img('@web/assets/images/20.PNG',['alt'=>'blusa', 'class'=>'card-img-top']); ?>
+      <div class="card-body">
+        <h5 class="card-title">Blusa</h5>
+        <a href="#" class="btn btn-info">Comprar</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+        <?php echo Html::img('@web/assets/images/21.jpg',['alt'=>'blusa', 'class'=>'card-img-top']); ?>
+      <div class="card-body">
+        <h5 class="card-title">Blusa</h5>
+        <a href="#" class="btn btn-info">Comprar</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+        <?php echo Html::img('@web/assets/images/22.jpeg',['alt'=>'blusa', 'class'=>'card-img-top']); ?>
+      <div class="card-body">
+        <h5 class="card-title">Blusa</h5>
+        <a href="#" class="btn btn-info">Comprar</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+        <?php echo Html::img('@web/assets/images/23.jpeg',['alt'=>'blusa', 'class'=>'card-img-top']); ?>
+      <div class="card-body">
+        <h5 class="card-title">Blusa</h5>
+        <a href="#" class="btn btn-info">Comprar</a>
+      </div>
+    </div>
+  </div>
+    
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+        <?php echo Html::img('@web/assets/images/24.jpeg',['alt'=>'blusa', 'class'=>'card-img-top']); ?>
+      <div class="card-body">
+        <h5 class="card-title">Blusa</h5>
+        <a href="#" class="btn btn-info">Comprar</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+        <?php echo Html::img('@web/assets/images/25.jpeg',['alt'=>'blusa', 'class'=>'card-img-top']); ?>
+      <div class="card-body">
+          <h5 class="card-title">Blusa</h5>
+          <a href="#" class="btn btn-info">Comprar</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+        <?php echo Html::img('@web/assets/images/26.jpeg',['alt'=>'blusa', 'class'=>'card-img-top']); ?>
+      <div class="card-body">
+        <h5 class="card-title">Blusa</h5>
+        <a href="#" class="btn btn-info">Comprar</a>
+      </div>
+    </div>
+  </div>
 
 
 </div>
