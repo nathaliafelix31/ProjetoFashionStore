@@ -7,27 +7,22 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\PessoaSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Pessoas';
+$this->title = 'Clientes';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="pessoa-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>
-    <?php 
-        if (!Yii::$app->user->isGuest) {
-
-            echo Html::a('Cadastrar', ['create'], ['class' => 'btn btn-success']);
-        }
-    ?>
-    </p>
+    
+   
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+        'summary' => '',
         'columns' => [
            // ['class' => 'yii\grid\SerialColumn'],
 

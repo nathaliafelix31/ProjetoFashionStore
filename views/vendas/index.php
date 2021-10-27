@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\VendasSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Vendas';
+$this->title = 'Carrinho';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="vendas-index">
@@ -27,6 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+        'summary' => '',
         'columns' => [
             //['class' => 'yii\grid\SerialColumn'],
 

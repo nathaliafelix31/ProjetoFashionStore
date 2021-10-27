@@ -1,9 +1,10 @@
 <?php
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 use yii\widgets\ActiveForm;
 
-use yii\helpers\Url;
+
 /* @var $this yii\web\View */
 
 $this->title = '🌺Fashion Strore';
@@ -54,11 +55,13 @@ $this->title = '🌺Fashion Strore';
         </div>
 
     </section>
+       
+       <div class="container">
        <h2>Promoções</h2>
-       <a data-id="20211020" data-name="MOSAICO1" data-position="M03" data-category="HOMEPAGE" data-criativo="CATEGORIA_BLUSAS" href="/produto/blusa" tabindex="0"><img class="m-w-100 h-auto" src="https://images2.marisa.com.br/medias/sys_master/images/images/h5e/h16/13092982128670/20211020-HOMEPAGE-MOSAICO1-BLUSAS.png" alt="Blusas" title="20211020-HOMEPAGE-MOSAICO1-MOBILE-M03-CATEGORIA_BLUSAS" width="128" height="157" data-gtm-vis-recent-on-screen-7562000_1389="4345" data-gtm-vis-first-on-screen-7562000_1389="4345" data-gtm-vis-total-visible-time-7562000_1389="500" data-gtm-vis-has-fired-7562000_1389="1"></a>
-       <a data-id="20211020" data-name="MOSAICO1" data-position="M02" data-category="HOMEPAGE" data-criativo="CATEGORIA_VESTIDOS" href="/produto/vestido" tabindex="0"><img class="m-w-100 h-auto" src="https://images2.marisa.com.br/medias/sys_master/images/images/h27/h7f/13092981604382/20211020-HOMEPAGE-MOSAICO1-VESTIDOS.png" alt="Vestidos" title="20211020-HOMEPAGE-MOSAICO1-MOBILE-M02-CATEGORIA_VESTIDOS" width="128" height="157" data-gtm-vis-recent-on-screen-7562000_1389="4344" data-gtm-vis-first-on-screen-7562000_1389="4344" data-gtm-vis-total-visible-time-7562000_1389="500" data-gtm-vis-has-fired-7562000_1389="1"></a>
-       <a data-id="20211020" data-name="MOSAICO1" data-position="M04" data-category="HOMEPAGE" data-criativo="CATEGORIA_BIQUINIS" href="/produto/biquini" tabindex="-1"><img class="m-w-100 h-auto" src="https://images2.marisa.com.br/medias/sys_master/images/images/h43/had/13092983144478/20211020-HOMEPAGE-MOSAICO1-BIQUINIS.png" alt="Biquinis" title="20211020-HOMEPAGE-MOSAICO1-MOBILE-M04-CATEGORIA_BIQUINIS" width="128" height="157" data-gtm-vis-recent-on-screen-7562000_1389="4345" data-gtm-vis-first-on-screen-7562000_1389="4345" data-gtm-vis-total-visible-time-7562000_1389="500" data-gtm-vis-has-fired-7562000_1389="1"></a>
- 
+            <a data-id="20211020" data-name="MOSAICO1" data-position="M03" data-category="HOMEPAGE" data-criativo="CATEGORIA_BLUSAS" href="<?=Url::to(['/produto/index']);?>" tabindex="0"><img class="m-w-100 h-auto" src="https://images2.marisa.com.br/medias/sys_master/images/images/h5e/h16/13092982128670/20211020-HOMEPAGE-MOSAICO1-BLUSAS.png" alt="Blusas" title="20211020-HOMEPAGE-MOSAICO1-MOBILE-M03-CATEGORIA_BLUSAS" width="128" height="157" data-gtm-vis-recent-on-screen-7562000_1389="4345" data-gtm-vis-first-on-screen-7562000_1389="4345" data-gtm-vis-total-visible-time-7562000_1389="500" data-gtm-vis-has-fired-7562000_1389="1"></a>
+            <a data-id="20211020" data-name="MOSAICO1" data-position="M02" data-category="HOMEPAGE" data-criativo="CATEGORIA_VESTIDOS" href="<?=Url::to(['/produto/index']);?>" tabindex="0"><img class="m-w-100 h-auto" src="https://images2.marisa.com.br/medias/sys_master/images/images/h27/h7f/13092981604382/20211020-HOMEPAGE-MOSAICO1-VESTIDOS.png" alt="Vestidos" title="20211020-HOMEPAGE-MOSAICO1-MOBILE-M02-CATEGORIA_VESTIDOS" width="128" height="157" data-gtm-vis-recent-on-screen-7562000_1389="4344" data-gtm-vis-first-on-screen-7562000_1389="4344" data-gtm-vis-total-visible-time-7562000_1389="500" data-gtm-vis-has-fired-7562000_1389="1"></a>
+            <a data-id="20211020" data-name="MOSAICO1" data-position="M04" data-category="HOMEPAGE" data-criativo="CATEGORIA_BIQUINIS" href="<?=Url::to(['/produto/index']);?>" tabindex="-1"><img class="m-w-100 h-auto" src="https://images2.marisa.com.br/medias/sys_master/images/images/h43/had/13092983144478/20211020-HOMEPAGE-MOSAICO1-BIQUINIS.png" alt="Biquinis" title="20211020-HOMEPAGE-MOSAICO1-MOBILE-M04-CATEGORIA_BIQUINIS" width="128" height="157" data-gtm-vis-recent-on-screen-7562000_1389="4345" data-gtm-vis-first-on-screen-7562000_1389="4345" data-gtm-vis-total-visible-time-7562000_1389="500" data-gtm-vis-has-fired-7562000_1389="1"></a>
+        </div>
   
        <div class="column  static-links">
             <h3 class="st-footer-title destaque-footer pb-1">Siga-nos</h3>
@@ -67,14 +70,14 @@ $this->title = '🌺Fashion Strore';
 					
                         <li class="instagram">
                             <a href="https://www.instagram.com/fashionstoreoficial08/" target="_blank" title="">
-                                <p>Instagram</p>
+                                <p>💌 Instagram</p>
                                 <span class="d-none"></span>
                             </a>
                         </li>
 
                         <li class="whatsapp">
                             <a href="https://l.instagram.com/?u=https%3A%2F%2Fchat.whatsapp.com%2FKtlHFaZTG5BJ3nOM599GSD&e=ATN0H2723Ai5qkoQOyuJuva1sax7g9pLg6KmU7ZWlTNfisuGbjOM_N_po13G2Gh9w9bEQTOiNuRyVDum3lsTMw&s=1!" target="_blank" title="">
-                                <p>Whatsapp</p>
+                                <p>📞 Whatsapp</p>
                                 <span class="d-none">(38) 99257-8471</span>
                             </a>
                         </li>

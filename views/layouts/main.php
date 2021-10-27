@@ -42,9 +42,15 @@ AppAsset::register($this);
                 
             ],
             [
-                'url' => ['/pessoa/index'],
+                
                 'label' => 'Cadastro',
                 'icon' => 'glyphicon glyphicon-user',
+                'items' => [
+                    ['label' => 'Novo', 'icon'=>'
+                    glyphicon glyphicon-plus-sign','url'=>['/pessoa/create']],
+                    ['label' => 'Clientes', 'icon'=>'glyphicon glyphicon-star', 'url'=>['/pessoa/index']],
+                ],
+                
                 
             ],
             
@@ -58,13 +64,11 @@ AppAsset::register($this);
                 'label' => 'Produto',
                 'icon' => 'glyphicon glyphicon-heart',
                 'items' => [
+                    
                     ['label' => 'Novo', 'icon'=>'
-                    glyphicon glyphicon-plus-sign', 'url'=>['/produto/index']],
-                    ['label' => 'Biquinis', 'icon'=>'glyphicon glyphicon-star', 'url'=>['/produto/biquini']],
-                    ['label' => 'Blusas', 'icon'=>'glyphicon glyphicon-star', 'url'=>['/produto/blusa']],
-                    ['label' => 'Calças', 'icon'=>'glyphicon glyphicon-star', 'url'=>['/produto/calça']],
-                    ['label' => 'Shorts', 'icon'=>'glyphicon glyphicon-star', 'url'=>['/produto/short']],
-                    ['label' => 'Vestidos', 'icon'=>'glyphicon glyphicon-star', 'url'=>['/produto/vestido']],
+                    glyphicon glyphicon-plus-sign','url'=>['/produto/create']],
+                    ['label' => 'Coleção', 'icon'=>'glyphicon glyphicon-star', 'url'=>['/produto/index']],
+                    
                    
                 ],
                 Yii::$app->user->isGuest ? (

@@ -19,6 +19,17 @@ class ProdutoController extends Controller
     /**
      * @inheritDoc
      */
+/* public function actionIndex($id){
+        //$produto = Produto::findOne($id);
+        $produto = Produto::find()->where(['id'=>$id])->one();
+        $dataProvider = $searchModel->search($this->request->queryParams);
+        return $this->render('index',['produto'=>$produto,
+            'dataProvider' => $dataProvider,
+           
+           
+        ]);
+    }*/
+
     public function behaviors()
     {
         return array_merge(
